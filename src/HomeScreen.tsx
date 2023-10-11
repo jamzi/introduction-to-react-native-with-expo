@@ -1,8 +1,10 @@
 import { StyleSheet, View, Text, Button } from "react-native";
 import { HomeScreenProps } from "./navigation/types";
 
-export default function HomeScreen({}: HomeScreenProps) {
-  const navigateToDetails = () => {};
+export default function HomeScreen({ navigation }: HomeScreenProps) {
+  const navigateToDetails = () => {
+    navigation.navigate("Details", { email: "test@test.com" });
+  };
 
   return (
     <View style={styles.container}>
