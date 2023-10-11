@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
+import { DetailsScreenProps } from "./navigation/types";
 
-export default function App() {
+export default function DetailsScreen({}: DetailsScreenProps) {
   return (
     <View style={styles.container}>
-      <Text>App.tsx</Text>
+      <Text>Details Screen</Text>
     </View>
   );
 }
