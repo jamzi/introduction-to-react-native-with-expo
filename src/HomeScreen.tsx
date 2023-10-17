@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Button } from "react-native";
+import { StyleSheet, View, Text, Button, Image } from "react-native";
 import { HomeScreenProps } from "./navigation/types";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -12,6 +12,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <Text style={styles.text}>Home Screen</Text>
+      <Image style={styles.image} source={require("../assets/favicon.png")} />
       <Button title="Navigate to Details" onPress={navigateToDetails} />
     </View>
   );
@@ -24,4 +25,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   text: { fontSize: 20 },
+  image: {
+    width: 100,
+    height: 100,
+    transform: [{ rotate: "45deg" }],
+  },
 });
